@@ -16,13 +16,15 @@ let config = {
   root: ""
 };
 
-
+let inProcess = false;
+let needDownloadCount = 0;
+let downloadedCount = 0;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
     width: 900,
     height: 600,
-    resizable: true,
+    resizable: false,
     webPreferences: {
       webSecurity: true,
       enableRemoteModule: true,
@@ -31,34 +33,61 @@ function createWindow() {
     }
   });
   mainWindow.setMenu(null);
-  mainWindow.webContents.openDevTools();
+  //mainWindow.webContents.openDevTools();
 
   ipcMain.on('update', async () => {
-    await processingFolder(config.root);
+    if (needDownloadCount == downloadedCount) {
+      needDownloadCount = 0;
+      downloadedCount = 0;
+      inProcess = false;
+    }
+    try {
+      await processingFolder(config.root);
+    } catch (err) {
+      mainWindow.webContents.send('log', {
+        event: 'error',
+        data: err.message
+      });
+    }
   });
 
   ipcMain.on('openDialog', async () => {
     let selectedFolder = await dialog.showOpenDialog({ properties: ['openDirectory'] });
     if (selectedFolder) {
       try {
-        console.log(selectedFolder.filePaths[0]);
-        config.root = selectedFolder.filePaths[0];
-        await fs.writeFileSync(path.join(__dirname, 'config.json'), JSON.stringify(config));
-        processingFolder(selectedFolder.filePaths[0]);
+        if (needDownloadCount == downloadedCount) {
+          needDownloadCount = 0;
+          downloadedCount = 0;
+          inProcess = false;
+        }
+        await processingFolder(selectedFolder.filePaths[0]).then(async () => {
+          config.root = selectedFolder.filePaths[0];
+          await fs.writeFileSync(path.join(__dirname, 'config.json'), JSON.stringify(config));
+          mainWindow.webContents.send("selected-folder", !config.root ? "Empty path" : config.root);
+        });
       } catch (err) {
-        mainWindow.webContents.send('Error', err);
+        mainWindow.webContents.send('log', {
+          event: 'error',
+          data: err.message
+        });
       }
     }
   })
+
+  ipcMain.on('get-folder', () => {
+    mainWindow.webContents.send("selected-folder", !config.root ? "Empty path" : config.root);
+  });
+
   mainWindow.loadFile('index.html');
 }
-app.on("ready", createWindow);
+app.on("ready", () => {
+  createWindow();
+  request(`https://raw.githubusercontent.com/nure-store-server-data/mc-mods/main/index.json`, { headers: { 'user-agent': 'node.js' } }, async (err, res, body) => {
+    hashTable = JSON.parse(body);
+    await loadConfig();
+  });
+});
 
-
-request(`https://raw.githubusercontent.com/nure-store-server-data/mc-mods/main/index.json`, { headers: { 'user-agent': 'node.js' } }, async (err, res, body) => {
-  hashTable = JSON.parse(body);
-  await loadConfig();
-})
 
 async function loadConfig() {
   config = JSON.parse(await fs.readFileSync(path.join(__dirname, 'config.json')));
@@ -73,7 +102,7 @@ async function loadConfig() {
       data: 'Started updating files.'
     });
     mainWindow.webContents.send('update-start');
-    processingFolder(config.root);
+    await processingFolder(config.root);
     mainWindow.webContents.send('log', {
       event: 'update-end',
       data: 'Update finished.'
@@ -81,15 +110,21 @@ async function loadConfig() {
   }
 }
 
-
-
 app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') app.quit();
 })
 
 async function processingFolder(folder) {
   if (!(await fs.existsSync(path.join(folder, 'mods'))))
-    throw new Error("Incorrect path!");
+    throw new Error('Incorrect folder!');
+
+  if (inProcess)
+    return;
+  inProcess = true;
+  mainWindow.webContents.send('log', {
+    event: 'processing-status',
+    data: `Started processing`
+  });
   fs.readdir(path.join(folder, 'mods'), async (err, files) => {
     if (err) throw err;
 
@@ -126,10 +161,15 @@ async function processingFolder(folder) {
           event: 'need-download',
           data: `Need Downlodad ${path.join(folder, 'mods', val.file)}`
         });
+        needDownloadCount++;
         await downloadFile(folder, val.file);
       }
     });
-  })
+    mainWindow.webContents.send('log', {
+      event: 'processing-status',
+      data: `End processing`
+    });
+  });
 }
 
 async function downloadFile(folder, fileName) {
@@ -143,14 +183,29 @@ async function downloadFile(folder, fileName) {
 
     file.on("finish", () => {
       file.close();
+      downloadedCount++;
       mainWindow.webContents.send('log', {
         event: 'download-completed-file',
-        data: `Download completed ${path.join(folder, 'mods', fileName)}`
+        data: `Download completed (${downloadedCount}/${needDownloadCount}) ${path.join(folder, 'mods', fileName)}`
       });
-      console.log("Download Completed - " + fileName);
+      console.log(`Download Completed (${downloadedCount}/${needDownloadCount}) - ` + fileName);
+      if (downloadedCount == needDownloadCount) {
+        inProcess = false;
+        mainWindow.webContents.send('log', {
+          event: 'end-install-file',
+          data: `End updating files!`
+        });
+      }
     });
   }).on('error', function (err) {
+    downloadedCount++;
     file.unlink(path.join(folder, 'mods', fileName));
     throw err;
+  });
+}
+
+function sleep(ms) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
   });
 }
