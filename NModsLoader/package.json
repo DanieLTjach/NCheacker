@@ -1,0 +1,12 @@
+{
+  "name": "nmodsloader",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "node . 'E:\\NLauncher\\NModsLoader\\test'",
+    "start": "node ."
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

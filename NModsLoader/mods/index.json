@@ -1,0 +1,226 @@
+[
+    {
+        "file": "appliedenergistics2-11.5.0.jar",
+        "hash": "4d459ff2316ea403c3dc1fda71becad31ed7b926"
+    },
+    {
+        "file": "architectury-4.9.84-forge.jar",
+        "hash": "a932a1af3d344144dd95cd202fd5a9478242e01e"
+    },
+    {
+        "file": "balm-3.2.0+0.jar",
+        "hash": "cb9c82f12842299dcd7eea9cff036fc464bbd52d"
+    },
+    {
+        "file": "BiomesOPlenty-1.18.2-16.0.0.109-universal.jar",
+        "hash": "760d09f3c530eb9dd1cf5d3c908ca922b3270c17"
+    },
+    {
+        "file": "Bookshelf-Forge-1.18.2-13.2.50.jar",
+        "hash": "7442253aef1fca2abf0a53c42a0002699dfc3d32"
+    },
+    {
+        "file": "buildinggadgets-3.13.0-build.5+mc1.18.2.jar",
+        "hash": "51b5a75e51dc8b51d90f9220ccb8ca3e03e6dd14"
+    },
+    {
+        "file": "carryon-1.18.2-1.17.0.8.jar",
+        "hash": "379256bc458f5ca20b4c3d1d5a89fac3f913ef93"
+    },
+    {
+        "file": "cc-tweaked-1.18.2-1.100.10.jar",
+        "hash": "cf5fb68e3ca64e6f3ee218cdddaa0651caceaaab"
+    },
+    {
+        "file": "ChiselsBits-forge-1.18.2-1.2.114-universal.jar",
+        "hash": "230e226c2b1a9b845f8b38921353944a925f92d1"
+    },
+    {
+        "file": "CodeChickenLib-1.18.2-4.1.2.475-universal.jar",
+        "hash": "b2c0f29b52de1083e9221276661334224bcc2bab"
+    },
+    {
+        "file": "cofh_core-1.18.2-9.0.0.24.jar",
+        "hash": "494666db582bd8b32294ec50bbc56e582a20bd0a"
+    },
+    {
+        "file": "configured-2.0.0-1.18.2.jar",
+        "hash": "dd68539ae7e31a39d4b19dea26acf8cef776efee"
+    },
+    {
+        "file": "CraftTweaker-forge-1.18.2-9.1.195.jar",
+        "hash": "ace6aa0f8ac5ac13e04ddf9ce81988c3b7d00248"
+    },
+    {
+        "file": "create-1.18.2-0.5.0.e.jar",
+        "hash": "102bd0f5ae1a10b531fb6169709b4ea7ebca6844"
+    },
+    {
+        "file": "DarkUtilities-Forge-1.18.2-10.0.5.jar",
+        "hash": "406127df51d985079dba53119d44cb6d3b80b02f"
+    },
+    {
+        "file": "elevatorid-1.18.2-1.8.4.jar",
+        "hash": "c32376d6741c1f8ec4ed637bb55e070c3ad3200e"
+    },
+    {
+        "file": "EnderStorage-1.18.2-2.9.0.182-universal.jar",
+        "hash": "be5e81559868d59c06587e28455a973ce5c099bd"
+    },
+    {
+        "file": "extra-utilities-reborn-1.7.3-release.jar",
+        "hash": "bb9ca78150295f8501f2f897aff05f91de574eaa"
+    },
+    {
+        "file": "FastLeafDecay-28.jar",
+        "hash": "1005968a5f60863168156efbf0ed7e05137d6ab2"
+    },
+    {
+        "file": "flywheel-forge-1.18.2-0.6.5.jar",
+        "hash": "c4052cab3cacd1211a7a83bab0202d770558d972"
+    },
+    {
+        "file": "ftb-chunks-forge-1802.3.6-build.170.jar",
+        "hash": "49780169fd4a80b8e3bebddced49e54c355ddb39"
+    },
+    {
+        "file": "ftb-library-forge-1802.3.6-build.140.jar",
+        "hash": "69945cb86ef537f20eb6ec66757de7b3a4ca699e"
+    },
+    {
+        "file": "ftb-teams-forge-1802.2.6-build.69.jar",
+        "hash": "14bee1ec7eae3a03cd54179d204598774a6d7122"
+    },
+    {
+        "file": "ImmersiveEngineering-1.18.2-8.2.2-154.jar",
+        "hash": "355df63a3a049b2573c9309d59a770d21de3ec66"
+    },
+    {
+        "file": "index.json",
+        "hash": "97d170e1550eee4afc0af065b78cda302a97674c"
+    },
+    {
+        "file": "ironchest-1.18.2-13.2.11.jar",
+        "hash": "cff2b97673a833704d8f28ea46dbc8d6eaac92a3"
+    },
+    {
+        "file": "jei-1.18.2-9.7.1.255.jar",
+        "hash": "af72805f44b69f11b2c1c849478dd8a312030c18"
+    },
+    {
+        "file": "jeiintegration_1.18.2-9.0.0.37.jar",
+        "hash": "680eb558dd2165d5fc70def67fc854f6cf583b2a"
+    },
+    {
+        "file": "jeimultiblocks-1.18.2-0.0.2.jar",
+        "hash": "a077063b2e691bbe35377a35e7c52b67484ef634"
+    },
+    {
+        "file": "journeymap-1.18.2-5.8.5-forge.jar",
+        "hash": "5af7f3162e99231e2809de227968cb81bbe915be"
+    },
+    {
+        "file": "JustEnoughResources-1.18.2-0.14.1.171.jar",
+        "hash": "50871f1b4902d3248528424eadb8087feae03285"
+    },
+    {
+        "file": "Mantle-1.18.2-1.9.27.jar",
+        "hash": "dd84616e295d14854a7967927d4f26623766f4dc"
+    },
+    {
+        "file": "mcjtylib-1.18-6.0.17.jar",
+        "hash": "7628e955439a7d1fbc2038167fa18771cfad6d87"
+    },
+    {
+        "file": "Mekanism-1.18.2-10.2.5.465.jar",
+        "hash": "86248728732c1877cdc281695f67cbd7d6727e28"
+    },
+    {
+        "file": "MekanismGenerators-1.18.2-10.2.5.465.jar",
+        "hash": "c14bd25d7fa91cd321a0ff307f6212fa2ccfe535"
+    },
+    {
+        "file": "MekanismTools-1.18.2-10.2.5.465.jar",
+        "hash": "0cad2bb8b70a56a331844b11a9bb1c8e2cf493a6"
+    },
+    {
+        "file": "mob_grinding_utils-1.18.2-0.4.46.jar",
+        "hash": "9892885f405f580e0d132768fe50465247121e17"
+    },
+    {
+        "file": "MouseTweaks-forge-mc1.18-2.21.jar",
+        "hash": "dc64a2a0df9b205114768a89482fe57ffac54143"
+    },
+    {
+        "file": "NaturesCompass-1.18.2-1.9.7-forge.jar",
+        "hash": "5082c495344807ba2764e2a3bbfa6d03f19aad16"
+    },
+    {
+        "file": "netherportalfix-forge-1.18-9.0.0.jar",
+        "hash": "85cba403b5671116aa688a54b825ea3edd2a7031"
+    },
+    {
+        "file": "PigPen-Forge-1.18.2-8.0.1.jar",
+        "hash": "83cea3592a64b5b042627dc20738f154be3369fe"
+    },
+    {
+        "file": "rftoolsbase-1.18-3.0.11.jar",
+        "hash": "57c4ec0c4ef6f2aed30efc29a383004f261f5675"
+    },
+    {
+        "file": "rftoolsbuilder-1.18-4.0.16.jar",
+        "hash": "1131bb1bce88a30e09aaedfd5ad333799751bdf5"
+    },
+    {
+        "file": "rftoolsdim-1.18-8.0.9.jar",
+        "hash": "186f8676f0f81e2ea3a73a271fdce857517fc6e3"
+    },
+    {
+        "file": "rftoolsstorage-1.18-3.0.11.jar",
+        "hash": "3c8d6ba3015d7a02af8a3808f500d9bb6028fb7f"
+    },
+    {
+        "file": "rftoolsutility-1.18-4.0.19.jar",
+        "hash": "341705e11bc30430a2c21faf2c1253ad77d90cec"
+    },
+    {
+        "file": "Runelic-Forge-1.18.2-11.0.1.jar",
+        "hash": "7b0e74b79b307be15a05f50a173e3396363b687a"
+    },
+    {
+        "file": "StorageDrawers-1.18.2-10.2.1.jar",
+        "hash": "2330bba44124f5481d34b02fb528815b97d3e357"
+    },
+    {
+        "file": "TConstruct-1.18.2-3.5.2.40.jar",
+        "hash": "9e3c9549fc176f29f78ef22eb82d7ad508860ee0"
+    },
+    {
+        "file": "TerraBlender-forge-1.18.2-1.2.0.126.jar",
+        "hash": "b8a025042f55dc78d38a319bd71e3901e9d00331"
+    },
+    {
+        "file": "thermal_cultivation-1.18.2-9.0.0.13.jar",
+        "hash": "392feb72eeee7bd68c6385d0820ed3321f35e6ee"
+    },
+    {
+        "file": "thermal_expansion-1.18.2-9.0.0.15.jar",
+        "hash": "f644919c46e6f5e09215dc603e698127883b55c7"
+    },
+    {
+        "file": "thermal_foundation-1.18.2-9.0.0.32.jar",
+        "hash": "24f2c91db574d254c9523455975f6d2d56400882"
+    },
+    {
+        "file": "thermal_innovation-1.18.2-9.0.0.14.jar",
+        "hash": "576af4ce7d82223c08f519e0fab1361d0d367be0"
+    },
+    {
+        "file": "thermal_integration-1.18.2-9.0.0.9.jar",
+        "hash": "3654204497a097ffc422c8748f973fa59d831afd"
+    },
+    {
+        "file": "voicechat-forge-1.18.2-2.3.10.jar",
+        "hash": "a648c07a2e39f31dfac9ca7fcd61b01683c4a77e"
+    }
+]

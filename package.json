@@ -1,0 +1,21 @@
+{
+  "name": "noiseless-computer-preset-r1e8o",
+  "productName": "noiseless-computer-preset-r1e8o",
+  "description": "My Electron application description",
+  "keywords": [],
+  "main": "./main.js",
+  "version": "1.0.0",
+  "author": "Daniel",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron-dl": "3.4.0",
+    "fs": "^0.0.1-security",
+    "request": "^2.88.2",
+    "sha256": "^0.2.0"
+  },
+  "devDependencies": {
+    "electron": "21.1.1"
+  }
+}
